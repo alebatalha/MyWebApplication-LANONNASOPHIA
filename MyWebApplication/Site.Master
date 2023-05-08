@@ -1,0 +1,166 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MyWebApplication.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="description padding-right animate-left">
+                    <div class="global-headline">
+                        <h2 class="sub-headline">Read
+                        </h2>
+                        <h3 class="headline headline-dark">Our Story</h3>
+                        <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+                    </div>
+                    <p>
+                        Imagine traditional cuisine: a jovial and caring lady, backed by years of profession. If compared to the refined starred chefs of haute cuisine it seems rustic and unpretentious, but when you go to eat at her you really feel at home, between generous portions and dishes so tasty that at the end of the meal you can only be satisfied, aware of having tasted the excellence of Italian gastronomy.
+
+                   
+
+                    <p>Here, now you realize that one day that old lady gets tired of the usual recipes and decides to experiment. She does not give up on her genuine ingredients, but she chooses to combine them in an unprecedented way, applying the rigorous techniques typical of haute cuisine: thus (re) born the Nuova Trattoria Italiana. And its worthy representative of the Aosta Valley, the Trattoria di Campagna.</p>
+                    <p>La nonna Sofia was born from our great-grandmother's dream of working as a chef. She dreamed of having the rest of her own with her own recipes and many delicious secrets. This a restarante is a family dream full of homemade and traditional recipes from my family. And we would like to celebrate the memory in our great-grandparents and grandparents and everyone else who made the rest and our unique and joyful recipes!</p>
+                    <p><b>Viva la cuccina italina! Mamma mia!!</b></p>
+                </div>
+                <div class="image animate-right">
+                    &nbsp;<img class="animate-top" src="images/about-img-2.jpeg" alt="bread"></div>
+            </div>
+        </div>
+    </section>
+        
+             <!-- ABOUT SECTION -->
+    <section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="image padding-right margin-bottom animate-left">
+                    <img src="images/about-img-1.jpeg" alt="bread">
+                </div>
+                <div class="description animate-right">
+                    <div class="global-headline">
+                        <h2 class="sub-headline">
+                            Pasta
+                        </h2>
+                        <h3 class="headline headline-dark">So Good</h3>
+                        <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+                    </div>
+                    <p><i>"It's Part of a Good Diet" - Nonna Sophia</i></p>
+                    <p>Pasta is made from grain, one of the basic food groups in a healthy diet that also can include vegetables, fruits, fish, and poultry. It's a good source of energy and can give you fiber, too, if it's made from whole grain. That can help with stomach problems and may help lower cholesterol.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+</head>
+<body>
+        <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">La Nona Sophia</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/About">About</a></li>
+                        <li><a runat="server" href="~/Contact">Menu</a></li>
+                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="~/Contact">Our Team</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div></div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            </footer>
+         <div class="container">
+            <div class="back-to-top">
+                <a href="#hero"><i class="fas fa-chevron-up"></i></a>
+            </div>
+            <div class="footer__content">
+                <div class="footer__content-about animate-top">
+                    <h4>About homemade Pasta</h4>
+                    <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+                    <p>You can contacto us on our social media</p>
+                </div>
+                <div class="footer__content-divider animate-bottom">
+                    <div class="social-media">
+                        <h4>Follow Us</h4>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                Instagram</li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                Twiter</li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                TikTok</li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-pinterest"></i>
+                                </a>
+                                </ul>
+                    <div>class="newsletter-container"</div> 
+                        <h4>Newsletter</h4>
+                        <action="class="newsletter-form">
+                            <div class="newsletter-form-box">
+                                <input type="text" class="newsletter-input" placeholder="Your email address...">
+                                <button class="newsletter-btn" type="submit">
+                                    <i class="fas fa-envelope"></i>
+                                </button>
+                            </div>
+                        </>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>
